@@ -12,7 +12,7 @@ namespace AkkaSelectionNettyEnvClient
 
                 ActorSystem system = ActorSystem.Create("Client");
 
-                var actor = system.ActorSelection("akka.tcp://Server@192.168.100.99:8083/user/HelloActor")
+                var actor = system.ActorSelection("akka.tcp://Server@192.168.0.101:8083/user/HelloActor")
                     .ResolveOne(TimeSpan.FromSeconds(10))
                     .Result;
 
@@ -20,7 +20,7 @@ namespace AkkaSelectionNettyEnvClient
 
                 system.Terminate();
             }
-            catch(Exception)
+            catch(Exception ex)
             {
 
             }

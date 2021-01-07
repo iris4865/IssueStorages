@@ -1,5 +1,5 @@
 [package]
-name = "rust_sqlx"
+name = "json_column"
 version = "0.1.0"
 authors = ["ms.kim <iris4865@gmail.com>"]
 edition = "2018"
